@@ -32,7 +32,7 @@ public class MenuAutor {
         g.drawString("Dźwięk wygranej: Megaman 7- Victory Theme",30,660);
 
         g.drawString("Link do projektu:",30,C.FRAME_HEIGHT-150);
-        g.drawString("https://github.com/MeHow2k/GraStatekProjektJava",30,C.FRAME_HEIGHT-120);
+        g.drawString("https://github.com/MeHow2k/SpaceJourney",30,C.FRAME_HEIGHT-120);
 
         g.setFont(new Font("arial",Font.BOLD,15));
         g.drawString("Aby powrócić do menu naciśnij ENTER",C.FRAME_WIDTH-300,C.FRAME_HEIGHT-70);

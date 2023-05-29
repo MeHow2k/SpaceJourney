@@ -286,7 +286,7 @@ public class GamePanel extends JPanel implements KeyListener {
                         if (listPunkt != null) {
                             for (int i = 0; i < listPunkt.size(); i++) {
                                 Punkt punkt = listPunkt.get(i);
-//kolizja gracza z Punktem, gdy lewy/prawy dolny róg Punktu dotknie gornego boku Gracza daje punkt i niszczy obiekt
+//kolizja gracza z Punktem, 
                                 if (isCollision(gracz.getX(), gracz.getY(), punkt.getX(), punkt.getY(),
                                         gracz.getW(), gracz.getH(), punkt.getW(), punkt.getH()) == true) {
                                     try {
@@ -594,7 +594,7 @@ public class GamePanel extends JPanel implements KeyListener {
                         if (listPunktBron != null) {
                             for (int i = 0; i < listPunktBron.size(); i++) {
                                 PunktBron punktBron = listPunktBron.get(i);
-//kolizja gracza z Punktem, gdy lewy/prawy dolny róg Punktu dotknie gornego boku Gracza daje punkt i niszczy obiekt
+//kolizja gracza z PunktemBron
                                 if (isCollision(gracz.getX(), gracz.getY(), punktBron.getX(), punktBron.getY(),
                                         gracz.getW(), gracz.getH(), punktBron.getW(), punktBron.getH()) == true) {
                                     C.PUNKTY++;
@@ -1359,16 +1359,12 @@ public class GamePanel extends JPanel implements KeyListener {
                 for (int i = 0; i < listPunktTarcza.size(); i++) {
                     listPunktTarcza.get(i).draw(g2D);
                 }
-            //rysowanie boss 1
-            try {
+            //rysowanie boss
                 if (listBoss1 != null && listBoss1.isEmpty() == false)
                     for (int i = 0; i < listBoss1.size(); i++) {
                         listBoss1.get(i).draw(g2D);
                     }
-            } catch (Exception r) {
-                System.out.println("rsysowanie blad");
-            }
-
+       
             if(C.LEVEL==0){
                 g.setColor(Color.white);
                 if(tempX==0) {

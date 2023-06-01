@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SpaceJourney:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SpaceJourney_jar</output-path>
+    <root id="archive" name="SpaceJourney.jar">
+      <element id="module-output" name="SpaceJourney" />
+      <element id="dir-copy" path="$PROJECT_DIR$/grafika" />
+      <element id="dir-copy" path="$PROJECT_DIR$/dzwiek" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/ustawienia.txt" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/highscore.txt" />
+    </root>
+  </artifact>
+</component>

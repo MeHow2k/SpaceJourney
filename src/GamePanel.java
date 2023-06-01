@@ -1752,7 +1752,7 @@ public class GamePanel extends JPanel implements KeyListener {
             C.highscorePunkty=0;
             C.highscoreLevel=0;
             //otwarcie pliku highscore
-            File config = new File("src/highscore.txt");
+            File config = new File("highscore.txt");
             FileWriter out = new FileWriter(config);
             //wpisanie aktualnego najlepszego wyniku
             out.write(C.highscorePunkty + "\n" + C.highscoreLevel);

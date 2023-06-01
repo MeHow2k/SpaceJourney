@@ -10,7 +10,6 @@ import java.util.*;
 import java.util.List;
 
 public class GamePanel extends JPanel implements KeyListener {
-    JButton buttonMenu, buttonStart, buttonQuit;
     Menu menu;
     MenuJakGrac menujakgrac;
     MenuOpcje menuOpcje;
@@ -1724,7 +1723,7 @@ public class GamePanel extends JPanel implements KeyListener {
     public void updateSettings(){
         try {
             //otwarcie pliku ustawień
-            File config = new File("src/ustawienia.txt");
+            File config = new File("ustawienia.txt");
             FileWriter out = new FileWriter(config);
             //wpisanie aktualnych ustawień do pliku ustawień
             out.write(C.musicVolume + "\n" + C.soundVolume+"\n"+C.isMuted);
@@ -1739,7 +1738,7 @@ public class GamePanel extends JPanel implements KeyListener {
             C.highscorePunkty=C.PUNKTY;
             C.highscoreLevel=C.LEVEL;
             //otwarcie pliku highscore
-            File config = new File("src/highscore.txt");
+            File config = new File("highscore.txt");
             FileWriter out = new FileWriter(config);
             //wpisanie aktualnego najlepszego wyniku
             out.write(C.highscorePunkty + "\n" + C.highscoreLevel);

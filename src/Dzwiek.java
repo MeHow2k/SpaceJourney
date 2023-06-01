@@ -1,4 +1,5 @@
 import javax.sound.sampled.*;
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 
@@ -62,8 +63,7 @@ public class Dzwiek {
         return (float) -80.0;
     }
     public static void playBackground() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File file = new File(("dzwiek/MMbackground.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(file);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("MMbackground.wav")));
         clipback = AudioSystem.getClip();
         clipback.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -73,8 +73,7 @@ public class Dzwiek {
         clipback.start();
     }
     public static void playMenuBackground() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File file = new File(("dzwiek/DTMenubackground.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(file);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("DTMenubackground.wav")));
         clipmenu = AudioSystem.getClip();
         clipmenu.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -84,8 +83,7 @@ public class Dzwiek {
         clipmenu.start();
     }
     public static void playBoss() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File file = new File(("dzwiek/PKMNboss.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(file);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("PKMNboss.wav")));
         clipboss = AudioSystem.getClip();
         clipboss.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -104,8 +102,7 @@ public class Dzwiek {
         clipboss.stop();
     }
     public static void playStrzal() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/strzal.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("strzal.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -115,8 +112,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playPunktBonus() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/punktBonus.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("punktBonus.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -125,8 +121,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playPunktZycie() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/punktZycie.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("punktZycie.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -135,8 +130,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playPrzegrana() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/Przegrana.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("Przegrana.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -145,8 +139,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playGraczHit() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/graczHit.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("graczHit.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -155,8 +148,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playPunkt() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/punkt.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("punkt.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -165,8 +157,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playMeteorHit() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/MeteorHit.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("MeteorHit.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -175,8 +166,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playEnemyHit() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/MeteorHit.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("MeteorHit.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -185,8 +175,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playWrogStrzal() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/wrogStrzal.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("wrogStrzal.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -195,8 +184,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playTarczaPickup() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/tarcza.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("tarcza.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -205,8 +193,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playRakietaWybuch() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/rakietaWybuch.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("rakietaWybuch.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -215,8 +202,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playCantShoot() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/cantshoot.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("cantshoot.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -225,8 +211,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playBateria() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/bateria.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("bateria.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -235,8 +220,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playDodatkowaRakieta() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/dodatkowarakieta.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("dodatkowarakieta.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)
@@ -245,8 +229,7 @@ public class Dzwiek {
         clip.start();
     }
     public static void playEnd() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-        File strzal = new File(("dzwiek/end.wav"));
-        AudioInputStream ais = AudioSystem.getAudioInputStream(strzal);
+        AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(Dzwiek.class.getResourceAsStream("end.wav")));
         Clip clip = AudioSystem.getClip();
         clip.open(ais);
         FloatControl gainControl = (FloatControl)

@@ -22,7 +22,7 @@ public class Ramka extends JFrame {
     public static void main(String[] args) {
         //wczytanie ustawień z pliku ustawień
         try {
-            File config = new File("src/ustawienia.txt");
+            File config = new File("ustawienia.txt");
             String absolutePath = config.getAbsolutePath();
             Scanner scanner = new Scanner(new FileInputStream(absolutePath),"UTF-8");
 
@@ -38,11 +38,11 @@ public class Ramka extends JFrame {
             }
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("nie znaleziono pliku");
         }
         //wczytanie najlepszego wyniku z ustawień
         try {
-            File config = new File("src/highscore.txt");
+            File config = new File("highscore.txt");
             String absolutePath = config.getAbsolutePath();
             Scanner scanner = new Scanner(new FileInputStream(absolutePath),"UTF-8");
             // sprawdzanie czy linia tekstu istnieje
@@ -53,7 +53,7 @@ public class Ramka extends JFrame {
                 C.highscoreLevel=Integer.parseInt(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("nie znaleziono pliku");
         }
 
         new Ramka();
